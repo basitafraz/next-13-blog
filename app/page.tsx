@@ -34,7 +34,7 @@ export default function Home() {
           </> 
         ))}
       </div>
-      <Link href=""><h1>Go to my Posts</h1></Link> 
+      <Link href="./posts"><h1>Go to my Posts</h1></Link> 
     </main>
     </>
   )
