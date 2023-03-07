@@ -2,7 +2,7 @@ import { Inter } from 'next/font/google'
 import styles from './page.module.css'
 import Link from 'next/link'
 import { posts } from '@/data/posts'
-import { type } from 'os'
+
 
 type Post = {
   id: String,
@@ -22,7 +22,7 @@ export default function Home() {
       <div>
         {posts.map(({id, title, date}: Post) => (
           <>
-          <Link href={title}>
+          <Link href={`/posts/${id}`}>  
               {title}
             </Link>
             <br/>
@@ -34,7 +34,7 @@ export default function Home() {
           </> 
         ))}
       </div>
-      <Link href='./posts'><h1>Go to my Posts</h1></Link> 
+      <Link href=""><h1>Go to my Posts</h1></Link> 
     </main>
     </>
   )
